@@ -1,14 +1,14 @@
 # Preseason Digital Notebook Example
-Name: **[INSERT NAME HERE]**
+Name: **Ayaan Irshad**
 
-Section: **[I2RC/ARC]**
+Section: **I2RC**
 
-Week: **[INSERT WEEK NUM HERE]**
+Week: **2**
 
 
 ## Code
 
-The main topic this week was: **[TOPIC NAME]**
+The main topic this week was: **Encoders**
 
 Commands: **[COMMANDS]**
 
