@@ -1,18 +1,18 @@
 # Preseason Digital Notebook Example
-Name: **[INSERT NAME HERE]**
+Name: **Ayaan Irshad**
 
-Section: **[I2RC/ARC]**
+Section: **ARC**
 
-Week: **[INSERT WEEK NUM HERE]**
+Week: **4**
 
 
 ## Code
 
-The main topic this week was: **[TOPIC NAME]**
+The main topic this week was: **Computer Vision**
 
-Commands: **[COMMANDS]**
+Commands: **None**
 
-Subsystems: **[SUBSYSTEMS]**
+Subsystems: **PhotonVision.java**
 
 ### How does the code work?
 Write about how it works here
