@@ -4,6 +4,7 @@
 
 package frc.robot;
 
+import frc.robot.commands.CV;
 import frc.robot.subsystems.PhotonVision;
 import edu.wpi.first.wpilibj2.command.Command;
 
@@ -12,11 +13,12 @@ import edu.wpi.first.wpilibj2.command.Command;
 public class RobotContainer {
   
   
-  public final PhotonVision photonvision = new PhotonVision();
-
+  public final PhotonVision photonVision = new PhotonVision();
+  public final CV cv = new CV(photonVision);
 
   public RobotContainer() {
     // Configure the trigger bindings
+    photonVision.setDefaultCommand(cv);
     configureBindings();
   }
 
