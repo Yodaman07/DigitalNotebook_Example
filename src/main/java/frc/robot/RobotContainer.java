@@ -25,8 +25,9 @@ public class RobotContainer {
   private final Joystick joy1 = new Joystick(0);
 
   private final DriveTrain dt = new DriveTrain();
+  private final LimitSwitch ls = new LimitSwitch();
 
-  private final TankDrive tankDrive = new TankDrive(dt, joy1);
+  private final TankDrive tankDrive = new TankDrive(dt, ls, joy1);
 
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */

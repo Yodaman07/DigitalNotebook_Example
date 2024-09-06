@@ -24,6 +24,7 @@ public class DriveTrain extends SubsystemBase
 {
   private final WPI_TalonSRX leftDriveTalon;
   private final WPI_TalonSRX rightDriveTalon;
+  
   //Initializes the talons
   private AHRS navx = new AHRS(SPI.Port.kMXP);
   //Initializes the nav system

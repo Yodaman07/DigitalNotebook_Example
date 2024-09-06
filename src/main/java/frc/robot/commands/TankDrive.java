@@ -8,21 +8,23 @@ package frc.robot.commands;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj2.command.Command;
 import frc.robot.subsystems.DriveTrain;
+import frc.robot.subsystems.LimitSwitch;
 
 //TankDrive is a command. It can package multiple elements of the robot together to make it move and work.
 public class TankDrive extends Command {
   public DriveTrain dt;
+  public LimitSwitch ls;
   //Creates an empty instance of the DriveTrain class
   public Joystick joy;
   public double mult = 0.7f;
 
   /** Creates a new TankDrive. */
-  public TankDrive(DriveTrain dt, Joystick j) {
+  public TankDrive(DriveTrain dt, LimitSwitch ls, Joystick j) {
     this.dt = dt;
     this.joy = j;
-
+    this.ls = ls;
     // Use addRequirements() here to declare subsystem dependencies.
-    addRequirements(dt);
+    addRequirements(dt, ls);
   }
 
   // Called when the command is initially scheduled.
