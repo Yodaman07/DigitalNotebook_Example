@@ -6,10 +6,8 @@ package frc.robot;
 
 import frc.robot.commands.*;
 import frc.robot.subsystems.*;
-import edu.wpi.first.wpilibj.Joystick;
+
 import edu.wpi.first.wpilibj2.command.Command;
-import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
-import edu.wpi.first.wpilibj2.command.button.Trigger;
 
 /**
  * This class is where the bulk of the robot should be declared. Since Command-based is a
@@ -22,17 +20,15 @@ public class RobotContainer {
 
   
   // Replace with CommandPS4Controller or CommandJoystick if needed
-  private final Joystick joy1 = new Joystick(0);
-
-  private final DriveTrain dt = new DriveTrain();
   private final LimitSwitch ls = new LimitSwitch();
+  private final LimitSwitchTest lst = new LimitSwitchTest(ls);
 
-  private final TankDrive tankDrive = new TankDrive(dt, ls, joy1);
+  // private final TankDrive tankDrive = new TankDrive(dt, ls, joy1);
 
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
-    dt.setDefaultCommand(tankDrive);
+    ls.setDefaultCommand(lst);
     // Configure the trigger bindings
     configureBindings();
   }

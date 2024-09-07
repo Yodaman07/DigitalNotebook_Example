@@ -4,7 +4,6 @@
 
 package frc.robot.subsystems;
 
-import java.util.Objects;
 
 import com.ctre.phoenix.motorcontrol.LimitSwitchNormal;
 import com.ctre.phoenix.motorcontrol.LimitSwitchSource;
