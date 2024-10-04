@@ -12,24 +12,37 @@ import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
-public class LimitSwitch extends SubsystemBase {
+public class Turret extends SubsystemBase {
   private final WPI_TalonSRX limitSwitchTalon;
   /** Creates a new forward LimitSwitch. */
-  public LimitSwitch() {
-    limitSwitchTalon = new WPI_TalonSRX(0); //Update with port num
+  public Turret() {
+    limitSwitchTalon = new WPI_TalonSRX(4); //Update with port num
     limitSwitchTalon.configForwardLimitSwitchSource(LimitSwitchSource.FeedbackConnector, LimitSwitchNormal.NormallyClosed);
 
     limitSwitchTalon.configForwardSoftLimitEnable(false);
+    limitSwitchTalon.configReverseSoftLimitEnable(false);
+
   }
 
-    public boolean getLimitValue(){
-      return limitSwitchTalon.isFwdLimitSwitchClosed() == 1; // returns true if fwd limit switch is closed
-  }
+
+    public void move(int direction){
+      limitSwitchTalon.set(0.4 * direction);
+    }
+
+    public boolean getLeftLimitValue(){
+      return limitSwitchTalon.isFwdLimitSwitchClosed() == 0; // returns true if fwd limit switch is closed
+    }
+
+     public boolean getRightLimitValue(){
+      return limitSwitchTalon.isRevLimitSwitchClosed() == 0; // returns true if fwd limit switch is closed
+    }
 
   @Override
   public void periodic() {
     // This method will be called once per scheduler run
-    SmartDashboard.putBoolean("Left_Limit", getLimitValue());
+    SmartDashboard.putBoolean("Left_Limit", getLeftLimitValue());
+    SmartDashboard.putBoolean("Right_Limit", getRightLimitValue());
+
         
   }
 }

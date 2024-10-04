@@ -20,7 +20,7 @@ public class RobotContainer {
 
   
   // Replace with CommandPS4Controller or CommandJoystick if needed
-  private final LimitSwitch ls = new LimitSwitch();
+  private final Turret ls = new Turret();
   private final LimitSwitchTest lst = new LimitSwitchTest(ls);
 
   // private final TankDrive tankDrive = new TankDrive(dt, ls, joy1);
