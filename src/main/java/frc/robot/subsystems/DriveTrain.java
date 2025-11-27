@@ -76,9 +76,6 @@ public class DriveTrain extends SubsystemBase
     //Displays data onto the Shuffleboard (SmartDashboard is outdated). Runs every 2ms
     SmartDashboard.putNumber("Left Voltage", leftDriveTalon.getMotorOutputPercent());
     SmartDashboard.putNumber("Right Voltage", rightDriveTalon.getMotorOutputPercent());
-    SmartDashboard.putNumber("Myamazingcontributionfortoday",100);
-    SmartDashboard.putNumber("Chakrisfavoritenumber",67);
-    SmartDashboard.putBoolean("IsSoftwareTheBest", true);
 
     LeftVoltage.setDouble(leftDriveTalon.getMotorOutputPercent());
     RightVoltage.setDouble(rightDriveTalon.getMotorOutputPercent());
